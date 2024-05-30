@@ -1,0 +1,12 @@
+use alienfile;
+
+plugin 'PkgConfig' => ( pkg_name => 'libtcod', );
+
+share {
+    plugin 'Download::GitHub' => (
+        github_user => 'libtcod',
+        github_repo => 'libtcod',
+    );
+    plugin 'Extract::ArchiveTar';
+    plugin 'Build::Autoconf';
+};
